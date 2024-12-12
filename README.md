@@ -92,3 +92,31 @@ This isused to create the database schema if the database does not already exist
         Method : GET
         
         http://127.0.0.1:5000/user/history/download
+        
+
+**API Requirement**
+
+Librarian APIs:
+
+        Create a new library user with an email and password.
+        View all book borrow requests.
+        Approve or deny a borrow request.
+        View a user’s book borrow history.
+
+Library User APIs:
+
+        Get list of books
+        Submit a request to borrow a book for specific dates (date1 to date2).
+        View personal book borrow history.
+
+**Rules**
+
+        A book cannot be borrowed by more than one user during the same period. (There can be multiple books of same name but each book will be considered as unique)
+        Use JWT Authentication for all APIs.
+        Handle all edge cases, such as:
+        Invalid or incomplete requests.
+        Overlapping borrow dates.
+        Requests for non-existent users or books.
+        Allow library users to download all their data (borrow history) as a CSV file.
+
+
